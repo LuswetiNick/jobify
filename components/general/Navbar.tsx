@@ -1,5 +1,8 @@
 import { DatabaseZap } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "../theme-toggle";
+
+import AuthButtons from "./auth-buttons";
 
 const Navbar = () => {
   return (
@@ -10,6 +13,10 @@ const Navbar = () => {
             <DatabaseZap />
             Jobify.
           </Link>
+          <div className="flex items-center gap-4">
+            <ThemeToggle />
+            <AuthButtons />
+          </div>
         </nav>
       </div>
     </header>

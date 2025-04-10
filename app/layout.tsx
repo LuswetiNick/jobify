@@ -1,8 +1,8 @@
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/general/Navbar";
-import { ThemeProvider } from "@/components/theme-provider";
 const geistSans = Geist({
   subsets: ["latin"],
 });
@@ -21,8 +21,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Navbar />
           {children}
+          <Toaster richColors />
         </ThemeProvider>
       </body>
     </html>
