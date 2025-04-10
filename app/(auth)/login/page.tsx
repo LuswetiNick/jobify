@@ -56,7 +56,7 @@ const LoginPage = () => {
             setLoading(true);
           },
           onSuccess: () => {
-            toast.success("Login successfull");
+            toast.success("Login successful");
             setLoading(false);
           },
           onError: (ctx) => {
